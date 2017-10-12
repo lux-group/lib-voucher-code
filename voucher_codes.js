@@ -23,7 +23,8 @@
         var charsets = {
             numbers: "0123456789",
             alphabetic: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
-            alphanumeric: "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            alphanumeric: "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            alphanumericUppercase: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         };
         return charsets[name];
     }
@@ -40,7 +41,7 @@
         config = config || {};
         this.count = config.count || 1;
         this.length = config.length || 8;
-        this.charset = config.charset || charset("alphanumeric");
+        this.charset = config.charset || charset("alphanumericUppercase");
         this.prefix = config.prefix || "";
         this.postfix = config.postfix || "";
         this.pattern = config.pattern || repeat("#", this.length);
