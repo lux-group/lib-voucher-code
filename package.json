@@ -1,39 +1,39 @@
 {
-    "name": "voucher-code-generator",
-    "version": "1.1.1",
-
-    "homepage": "http://www.voucherify.io/",
-    "description": "Voucher Code Generator",
-
-    "author": "rspective",
-    "license": "MIT",
-    "main": "voucher_codes.js",
-
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/rspective/voucher-code-generator-js.git"
-    },
-
-    "bugs": {
-        "url": "https://github.com/rspective/voucher-code-generator-js/issue",
-        "email": "dev@rspective.pl"
-    },
-
-    "keywords": [
-        "voucher",
-        "coupon",
-        "discount",
-        "gift",
-        "card",
-        "code",
-        "generator"
-    ],
-
-    "devDependencies": {
-      "jasmine-node": "~1.14.5"
-    },
-
-    "scripts": {
-        "test": "./node_modules/.bin/jasmine-node ./test"
-    }
+  "name": "@luxuryescapes/lib-voucher-code",
+  "version": "2.0.0",
+  "description": "Voucher Code Generator",
+  "license": "MIT",
+  "main": "voucher_codes.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha -r ts-node/register test/**/*.ts",
+    "lint": "eslint src test --ext .ts",
+    "lint-fix": "yarn run lint --fix",
+    "prepare": "yarn run build",
+    "prepublishOnly": "yarn test && yarn run lint",
+    "preversion": "yarn run lint",
+    "postversion": "git push && git push --tags"
+  },
+  "license": "MIT",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "devDependencies": {
+    "@types/assert": "^1.4.2",
+    "@types/mocha": "^5.2.7",
+    "@types/url-template": "^2.0.28",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
+    "assert": "^2.0.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "mocha": "^6.2.2",
+    "prettier": "^1.18.2",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.5.1"
+  }
 }
