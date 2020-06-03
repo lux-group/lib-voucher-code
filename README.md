@@ -13,13 +13,13 @@ This library originates from [Voucherify](http://www.voucherify.io/?utm_source=g
 Install with npm:
 
 ```
-$ npm install --save voucher-code-generator
+$ npm install --save @luxuryescapes/lib-voucher-code
 ```
 
 Include with require:
 
 ```
-var voucher_codes = require('voucher-code-generator');
+var voucher_codes = require('@luxuryescapes/lib-voucher-code');
 ```
 
 #### In a browser
